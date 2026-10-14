@@ -4,10 +4,10 @@
         <field name="name">product.brand.search.form</field>
         <field name="model">product.brand</field>
         <field name="arch" type="xml">
-            <search string="Product Brand">
-                <field name="name" />
-                <field name="partner_id" />
-            </search>
+            <search>
+                    <field name="name" />
+                    <field name="partner_id" />
+                </search>
         </field>
     </record>
     <record id="action_open_brand_products" model="ir.actions.act_window">
