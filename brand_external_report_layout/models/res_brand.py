@@ -4,8 +4,7 @@
 import base64
 import os
 
-import odoo
-from odoo import api, fields, models, tools
+from odoo import _, api, fields, models, tools
 
 
 class ResBrand(models.Model):
@@ -15,7 +14,7 @@ class ResBrand(models.Model):
         return base64.b64encode(
             open(
                 os.path.join(
-                    odoo.__path__[0],
+                    tools.config["root_path"],
                     "addons",
                     "base",
                     "static",
@@ -28,7 +27,7 @@ class ResBrand(models.Model):
 
     logo = fields.Binary(
         related="partner_id.image_1920",
-        default=lambda self: self._get_default_brand_logo(),
+        default=_get_default_brand_logo,
         string="Brand Logo",
         readonly=False,
     )
@@ -90,7 +89,7 @@ class ResBrand(models.Model):
         context = {"default_brand_id": self.id, "dialog_size": "extra-large"}
         context.update(self.env.context)
         return {
-            "name": self.env._("Configure your document layout"),
+            "name": _("Configure your document layout"),
             "type": "ir.actions.act_window",
             "view_mode": "form",
             "target": "new",
@@ -101,7 +100,7 @@ class ResBrand(models.Model):
     def _get_asset_style_b64(self):
         brand_styles = self.env["ir.qweb"]._render(
             "brand_external_report_layout.styles_brand_report",
-            {"brand_ids": self.sudo().search([], limit=False)},
+            {"brand_ids": self.sudo().search([])},
             raise_if_not_found=False,
         )
         return base64.b64encode(brand_styles.encode())

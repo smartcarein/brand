@@ -17,6 +17,7 @@ class TestPurchaseReport(BaseCommon):
                 "type": "consu",
             }
         )
+        cls.partner = cls.env["res.partner"].create({"name": "Test Vendor"})
         cls.purchase_order = cls.env["purchase.order"].create(
             {
                 "partner_id": cls.partner.id,

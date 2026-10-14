@@ -29,10 +29,13 @@ class ProductBrandTag(models.AbstractModel):
         default=lambda self: self.env.company.id,
     )
 
-    _tag_code_uniq = models.Constraint(
-        "unique(code, company_id)",
-        "Tag code must be unique inside a company",
-    )
+    _sql_constraints = [
+        (
+            "tag_code_uniq",
+            "unique(code, company_id)",
+            "Tag code must be unique inside a company",
+        ),
+    ]
 
     @api.depends("name")
     def _compute_code(self):

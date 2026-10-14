@@ -6,25 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-02-08 19:35+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"PO-Revision-Date: 2026-04-22 14:45+0000\n"
+"Last-Translator: Ed-Spain <eduamoros@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
 msgid "# Vendor Bills"
 msgstr "#Facturas de vendedor"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__account_move_count
-msgid "Account Move Count"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -82,11 +77,6 @@ msgid "Address Type"
 msgstr "Tipo de dirección"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__type_address_label
-msgid "Address Type Description"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
 "All the emails and documents sent to this contact will be translated in this "
@@ -108,12 +98,12 @@ msgstr "Recuento de archivos adjuntos"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__autopost_bills
 msgid "Auto-post bills"
-msgstr ""
+msgstr "Auto-envio Facturas"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__autopost_bills
 msgid "Automatically post bills for this trusted partner"
-msgstr ""
+msgstr "Automáticamente enviar Facturas para estos clientes verificados"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
@@ -124,11 +114,6 @@ msgstr ""
 "Enviar automáticamente un correo electrónico de confirmación al vendedor X "
 "días antes de la fecha prevista de recepción, pidiéndole que confirme la "
 "fecha exacta."
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__available_invoice_template_pdf_report_ids
-msgid "Available Invoice Template Pdf Report"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
@@ -202,8 +187,9 @@ msgstr "Nivel de uso de la marca"
 #. module: brand
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
-msgid "Brand company must match document company for %(doc_name)s"
+msgid "Brand company must match document company for %s"
 msgstr ""
+"La empresa de la marca debe coincidir con la empresa del documento para %s"
 
 #. module: brand
 #. odoo-python
@@ -227,12 +213,7 @@ msgstr "Marcas"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
 msgid "Buyer"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__channel_member_ids
-msgid "Channel Member"
-msgstr ""
+msgstr "Comprador"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
@@ -291,7 +272,7 @@ msgstr "ID de la compañía"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry_label
 msgid "Company ID Label"
-msgstr ""
+msgstr "Etiqueta ID de la compañía"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
@@ -302,11 +283,6 @@ msgstr "Nombre de la Compañía"
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_company_name
 msgid "Company Name Entity"
 msgstr "Nombre de la Entidad de la Compañía"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__company_registry_placeholder
-msgid "Company Registry Placeholder"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
@@ -340,6 +316,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
 msgstr "Contacto"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr "Contratos"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -393,6 +374,11 @@ msgid "Customer Location"
 msgstr "Ubicación del Cliente"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__customer_payment_mode_id
+msgid "Customer Payment Mode"
+msgstr "Modo de Pago del Cliente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Términos de Pago del Cliente"
@@ -420,18 +406,15 @@ msgstr "Grado de confianza que tiene en este deudor"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_invoice_edi_format
 msgid "Display Invoice Edi Format"
-msgstr ""
+msgstr "Mostrar formato EDI de factura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_invoice_template_pdf_report_id
 msgid "Display Invoice Template Pdf Report"
-msgstr ""
+msgstr "Mostrar plantilla PDF de informe de factura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_name
-#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__display_name
-#: model:ir.model.fields,field_description:brand.field_res_company__display_name
-#: model:ir.model.fields,field_description:brand.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Nombre a Mostrar"
 
@@ -443,7 +426,12 @@ msgstr "No utilice marcas en documentos comerciales"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicate_bank_partner_ids
 msgid "Duplicate Bank Partner"
-msgstr ""
+msgstr "Socio bancario duplicado"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
+msgid "Duplicated Bank Account Partners Count"
+msgstr "Recuento de socios de cuentas bancarias duplicadas"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
@@ -470,11 +458,6 @@ msgstr "Empleado/a"
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
 msgid "Fiscal Country Codes"
 msgstr "Códigos Fiscales de los Países"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_group_codes
-msgid "Fiscal Country Group Codes"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
@@ -508,6 +491,11 @@ msgid "Formatted Email"
 msgstr "Correo Electrónico Formateado"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr "GLN"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Latitud geográfica"
@@ -518,15 +506,17 @@ msgid "Geo Longitude"
 msgstr "Longitud geográfica"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
+msgstr "Número de ubicación global"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
 msgstr "Tiene mensaje"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
-#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__id
-#: model:ir.model.fields,field_description:brand.field_res_company__id
-#: model:ir.model.fields,field_description:brand.field_res_config_settings__id
 msgid "ID"
 msgstr "ID (identificación)"
 
@@ -567,12 +557,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_amount
 msgid "Ignore Abnormal Invoice Amount"
-msgstr ""
+msgstr "Ignorar importe de factura anormal"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_date
 msgid "Ignore Abnormal Invoice Date"
-msgstr ""
+msgstr "Ignorar fecha de factura anormal"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
@@ -610,19 +600,24 @@ msgid "Inlined Complete Address"
 msgstr "Dirección Completa en Línea"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format_store
-msgid "Invoice Edi Format Store"
-msgstr ""
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
+msgid "Invoice"
+msgstr "Factura"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_template_pdf_report_id
-msgid "Invoice report"
-msgstr ""
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format_store
+msgid "Invoice Edi Format Store"
+msgstr "Almacén de formato EDI de factura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_sending_method
 msgid "Invoice sending"
-msgstr ""
+msgstr "Envío de facturas"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_template_pdf_report_id
+msgid "Invoice template"
+msgstr "Plantilla de Factura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
@@ -632,17 +627,17 @@ msgstr "Facturas"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__is_brand_required
 msgid "Is Brand Required"
-msgstr ""
+msgstr "Marca obligatoria"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
+msgid "Is Coa Installed"
+msgstr "Plan contable instalado"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
 msgid "Is Follower"
 msgstr "Es seguidor/a"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_in_call
-msgid "Is In Call"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
@@ -660,6 +655,11 @@ msgid "Job Position"
 msgstr "Puesto de trabajo"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__journal_item_count
+msgid "Journal Items"
+msgstr "Artículos Diarios"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__lang
 msgid "Language"
 msgstr "Lenguaje"
@@ -675,14 +675,14 @@ msgid "Last Updated on"
 msgstr "Última Actualización el"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__main_user_id
-msgid "Main User"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error
 msgid "Message Delivery error"
 msgstr "Error en entrega de mensaje"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensaje para factura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
@@ -703,6 +703,11 @@ msgstr "Mensaje para albarán de existencias"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
 msgstr "Mensajes"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__mobile
+msgid "Mobile"
+msgstr "Móvil"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__my_activity_date_deadline
@@ -767,14 +772,25 @@ msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__offline_since
-msgid "Offline since"
-msgstr ""
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Porcentaje de Entregas a Tiempo"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Opcional"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter purchase_stock."
+"on_time_delivery_days or the default 365"
+msgstr ""
+"Durante los últimos x días; la cantidad de productos recibidos a tiempo "
+"dividida por la cantidad de productos pedidos.x es el parámetro del sistema "
+"buy_stock.on_time_delivery_days o el 365 predeterminado"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -789,12 +805,7 @@ msgstr "Socio"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
 msgid "Partner Company Registry Placeholder"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contratos del socio"
+msgstr "Marcador de posición del registro de empresa del socio"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
@@ -804,7 +815,7 @@ msgstr "Límite del socio"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_vat_placeholder
 msgid "Partner Vat Placeholder"
-msgstr ""
+msgstr "Marcador de posición del NIF del socio"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
@@ -822,6 +833,11 @@ msgid "Partners"
 msgstr "Socios"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
+msgid "Payable Limit"
+msgstr "Límite a pagar"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
 msgid "Payment Token Count"
 msgstr "Recuento de vales de pago"
@@ -837,34 +853,57 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_outbound_payment_method_line_id
+msgid ""
+"Preferred payment method when buying from this vendor. This will be set by "
+"default on all outgoing payments created for this vendor"
+msgstr ""
+"Método de pago preferido al comprar a este proveedor. Se establecerá por "
+"defecto en todos los pagos salientes creados para este proveedor"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_inbound_payment_method_line_id
+msgid ""
+"Preferred payment method when selling to this customer. This will be set by "
+"default on all incoming payments created for this customer"
+msgstr ""
+"Método de pago preferido al vender a este cliente. Se establecerá por "
+"defecto en todos los pagos entrantes creados para este cliente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
 msgstr "Lista de Precio"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__properties
-msgid "Properties"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__properties_base_definition_id
-msgid "Properties Base Definition"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_inbound_payment_method_line_id
 msgid "Property Inbound Payment Method Line"
-msgstr ""
+msgstr "Línea de método de pago entrante"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid "Property Outbound Payment Method Line"
-msgstr ""
+msgstr "Línea de método de pago saliente"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr "Contratos de compra"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Líneas de Compra"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
 msgstr "Recuento de órdenes de compra"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
+msgid "Purchase Order Warning"
+msgstr "Aviso de pedido de compra"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
@@ -892,9 +931,9 @@ msgid "Responsible User"
 msgstr "Usuario Responsable"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__rtc_session_ids
-msgid "Rtc Session"
-msgstr ""
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr "Contratos de venta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -907,9 +946,39 @@ msgid "Sales Order"
 msgstr "Orden de Venta"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn
+msgid "Sales Warnings"
+msgstr "Advertencias de ventas"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
 msgstr "Vendedor/a"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__customer_payment_mode_id
+msgid "Select the default payment mode for this customer."
+msgstr "Seleccione el modo de pago predeterminado para este cliente."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__supplier_payment_mode_id
+msgid "Select the default payment mode for this supplier."
+msgstr "Seleccione el modo de pago predeterminado para este proveedor."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__picking_warn
+#: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
+#: model:ir.model.fields,help:brand.field_res_brand__sale_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+"Si selecciona la opción \"Aviso\" se notificará a los usuarios con el "
+"mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción con "
+"el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el "
+"siguiente campo."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__self
@@ -920,6 +989,8 @@ msgstr "Propio"
 #: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
 msgstr ""
+"Establezca un valor mayor que 0,0 para activar una comprobación del límite "
+"de crédito"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
@@ -939,18 +1010,18 @@ msgstr "Tipo de ficha de inscripción"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__specific_property_product_pricelist
 msgid "Specific Property Product Pricelist"
-msgstr ""
+msgstr "Tarifa de producto específica de la propiedad"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__starred_message_ids
+msgid "Starred Message"
+msgstr "Mensaje Estrella"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "State"
 msgstr "Estado"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__application_statistics
-msgid "Stats"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_state
@@ -964,6 +1035,11 @@ msgstr ""
 "Atrasada: La fecha de vencimiento ya ha pasado\n"
 "Hoy: La fecha de la actividad es hoy\n"
 "Planificada: Actividades futuras."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
+msgid "Stock Picking"
+msgstr "Albarán de Existencias"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -991,6 +1067,11 @@ msgid "Supplier Currency"
 msgstr "Moneda de Proveedor"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_payment_mode_id
+msgid "Supplier Payment Mode"
+msgstr "Modo de pago del proveedor"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
 msgstr "Rango del proveedor"
@@ -1008,7 +1089,7 @@ msgstr "Número de identificación fiscal"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat_label
 msgid "Tax ID Label"
-msgstr ""
+msgstr "Etiqueta del NIF/CIF"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__country_code
@@ -1018,6 +1099,17 @@ msgid ""
 msgstr ""
 "EL código ISO del país en dos caracteres. \n"
 "Puede utilizar este campo para la búsqueda rápida."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+"El número de identificación fiscal. Los valores aquí se validarán en función "
+"del formato del país. Puede utilizar '/' para indicar que el socio no está "
+"sujeto a impuestos."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
@@ -1058,16 +1150,31 @@ msgstr ""
 "contacto."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__main_user_id
+#: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
 msgid ""
-"There can be several users related to the same partner. When a single user "
-"is needed, this field attempts to find the most appropriate one."
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
 msgstr ""
+"Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta a "
+"pagar para el socio actual"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+"Esta cuenta se utilizará en lugar de la cuenta por defecto como cuenta de "
+"cobro para el socio actual"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
-msgid "This currency will be used for purchases from the current partner"
+msgid ""
+"This currency will be used, instead of the default one, for purchases from "
+"the current partner"
 msgstr ""
+"Se utilizará esta moneda, en lugar de la predeterminada, para las compras de "
+"la pareja actual"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
@@ -1080,6 +1187,33 @@ msgstr ""
 "estrictamente una dirección de correo electrónico."
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+"Este plazo de pago se utilizará en lugar del predeterminado para las órdenes "
+"de compra y las facturas del vendedor"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+"Este plazo de pago se utilizará en lugar del predeterminado para los pedidos "
+"de cliente y las facturas de clientes"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+"Esta lista de precios se utilizará, en lugar de la predeterminada, para las "
+"ventas al socio actual"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz
 msgid "Timezone"
 msgstr "Zona Horaria"
@@ -1088,6 +1222,11 @@ msgstr "Zona Horaria"
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz_offset
 msgid "Timezone offset"
 msgstr "Desplazamiento de zona horaria"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__title
+msgid "Title"
+msgstr "Título"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__total_invoiced
@@ -1123,11 +1262,6 @@ msgstr "Tipo (o clase) de actividad excepcional registrada."
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr "Utilice un código de barras para identificar este contacto."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
-msgid "Used for sales to the current partner"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
@@ -1181,11 +1315,6 @@ msgstr ""
 "desfase horario de su cliente web."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid "You can use '/' to indicate that the customer has no Tax ID."
-msgstr ""
-
-#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
 msgstr "CP"
@@ -1217,19 +1346,7 @@ msgstr "Por ej. https://www.odoo.com"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
-msgstr ""
-
-#~ msgid ""
-#~ "The Tax Identification Number. Values here will be validated based on the "
-#~ "country format. You can use '/' to indicate that the partner is not "
-#~ "subject to tax."
-#~ msgstr ""
-#~ "El número de identificación fiscal. Los valores aquí se validarán en "
-#~ "función del formato del país. Puede utilizar '/' para indicar que el "
-#~ "socio no está sujeto a impuestos."
-
-#~ msgid "Blacklisted Phone is Phone"
-#~ msgstr "El teléfono en la lista negra es un teléfono"
+msgstr "Formato de factura electrónica"
 
 #~ msgid ""
 #~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
@@ -1241,6 +1358,34 @@ msgstr ""
 #~ "derivados.\n"
 #~ "             Lista disponible en https://docs.peppol.eu/poacc/billing/3.0/"
 #~ "codelist/eas/"
+
+#~ msgid "Peppol Endpoint"
+#~ msgstr "Punto final de Peppol"
+
+#~ msgid "Peppol e-address (EAS)"
+#~ msgstr "Dirección electrónica de Peppol (EAS)"
+
+#~ msgid ""
+#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+#~ "known as 'Endpoint ID'."
+#~ msgstr ""
+#~ "Identificador único utilizado por el BIS Billing 3.0 y sus derivados, "
+#~ "también conocido como \"Endpoint ID\"."
+
+#~ msgid "Partner Contracts"
+#~ msgstr "Contratos del socio"
+
+#~ msgid "Additional info"
+#~ msgstr "Información adicional"
+
+#~ msgid "Blacklisted Phone Is Mobile"
+#~ msgstr "El teléfono de la lista negra es un móvil"
+
+#~ msgid "Blacklisted Phone is Phone"
+#~ msgstr "El teléfono en la lista negra es un teléfono"
+
+#~ msgid "Company database ID"
+#~ msgstr "ID de la Base de Datos de la Compañía"
 
 #~ msgid ""
 #~ "Field used to store sanitized phone number. Helps speeding up searches "
@@ -1257,148 +1402,6 @@ msgstr ""
 #~ "recibirá más sms de envío masivo, de ninguna lista"
 
 #~ msgid ""
-#~ "Indicates if a blacklisted sanitized phone number is a phone number. "
-#~ "Helps distinguish which number is blacklisted             when there is "
-#~ "both a mobile and phone field in a model."
-#~ msgstr ""
-#~ "Indica si un número de teléfono saneado de la lista negra es un número de "
-#~ "teléfono. Ayuda a distinguir qué número está en la lista "
-#~ "negra                                 cuando hay tanto un campo de móvil "
-#~ "como de teléfono en un modelo."
-
-#~ msgid "Peppol Endpoint"
-#~ msgstr "Punto final de Peppol"
-
-#~ msgid "Peppol e-address (EAS)"
-#~ msgstr "Dirección electrónica de Peppol (EAS)"
-
-#~ msgid "Phone Blacklisted"
-#~ msgstr "Teléfono en la lista negra"
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error en la entrega de SMS"
-
-#~ msgid "Sanitized Number"
-#~ msgstr "Número saneado"
-
-#~ msgid ""
-#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-#~ "known as 'Endpoint ID'."
-#~ msgstr ""
-#~ "Identificador único utilizado por el BIS Billing 3.0 y sus derivados, "
-#~ "también conocido como \"Endpoint ID\"."
-
-#~ msgid "Brand company must match document company for %s"
-#~ msgstr ""
-#~ "La empresa de la marca debe coincidir con la empresa del documento para %s"
-
-#~ msgid "Duplicated Bank Account Partners Count"
-#~ msgstr "Recuento de socios de cuentas bancarias duplicadas"
-
-#~ msgid "Invoice"
-#~ msgstr "Factura"
-
-#~ msgid "Journal Items"
-#~ msgstr "Artículos Diarios"
-
-#~ msgid "Message for Invoice"
-#~ msgstr "Mensaje para factura"
-
-#~ msgid "Mobile"
-#~ msgstr "Móvil"
-
-#~ msgid "On-Time Delivery Rate"
-#~ msgstr "Porcentaje de Entregas a Tiempo"
-
-#~ msgid ""
-#~ "Over the past x days; the number of products received on time divided by "
-#~ "the number of ordered products.x is either the System Parameter "
-#~ "purchase_stock.on_time_delivery_days or the default 365"
-#~ msgstr ""
-#~ "Durante los últimos x días; la cantidad de productos recibidos a tiempo "
-#~ "dividida por la cantidad de productos pedidos.x es el parámetro del "
-#~ "sistema buy_stock.on_time_delivery_days o el 365 predeterminado"
-
-#~ msgid "Payable Limit"
-#~ msgstr "Límite a pagar"
-
-#~ msgid "Purchase Lines"
-#~ msgstr "Líneas de Compra"
-
-#~ msgid "Sales Warnings"
-#~ msgstr "Advertencias de ventas"
-
-#~ msgid ""
-#~ "Selecting the \"Warning\" option will notify user with the message, "
-#~ "Selecting \"Blocking Message\" will throw an exception with the message "
-#~ "and block the flow. The Message has to be written in the next field."
-#~ msgstr ""
-#~ "Si selecciona la opción \"Aviso\" se notificará a los usuarios con el "
-#~ "mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción "
-#~ "con el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el "
-#~ "siguiente campo."
-
-#~ msgid "Starred Message"
-#~ msgstr "Mensaje Estrella"
-
-#~ msgid "Stock Picking"
-#~ msgstr "Albarán de Existencias"
-
-#~ msgid ""
-#~ "This account will be used instead of the default one as the payable "
-#~ "account for the current partner"
-#~ msgstr ""
-#~ "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta "
-#~ "a pagar para el socio actual"
-
-#~ msgid ""
-#~ "This account will be used instead of the default one as the receivable "
-#~ "account for the current partner"
-#~ msgstr ""
-#~ "Esta cuenta se utilizará en lugar de la cuenta por defecto como cuenta de "
-#~ "cobro para el socio actual"
-
-#~ msgid ""
-#~ "This currency will be used, instead of the default one, for purchases "
-#~ "from the current partner"
-#~ msgstr ""
-#~ "Se utilizará esta moneda, en lugar de la predeterminada, para las compras "
-#~ "de la pareja actual"
-
-#~ msgid ""
-#~ "This payment term will be used instead of the default one for purchase "
-#~ "orders and vendor bills"
-#~ msgstr ""
-#~ "Este plazo de pago se utilizará en lugar del predeterminado para las "
-#~ "órdenes de compra y las facturas del vendedor"
-
-#~ msgid ""
-#~ "This payment term will be used instead of the default one for sales "
-#~ "orders and customer invoices"
-#~ msgstr ""
-#~ "Este plazo de pago se utilizará en lugar del predeterminado para los "
-#~ "pedidos de cliente y las facturas de clientes"
-
-#~ msgid ""
-#~ "This pricelist will be used, instead of the default one, for sales to the "
-#~ "current partner"
-#~ msgstr ""
-#~ "Esta lista de precios se utilizará, en lugar de la predeterminada, para "
-#~ "las ventas al socio actual"
-
-#~ msgid "Title"
-#~ msgstr "Título"
-
-#~ msgid "Additional info"
-#~ msgstr "Información adicional"
-
-#~ msgid "Blacklisted Phone Is Mobile"
-#~ msgstr "El teléfono de la lista negra es un móvil"
-
-#~ msgid "Company database ID"
-#~ msgstr "ID de la Base de Datos de la Compañía"
-
-#~ msgid ""
 #~ "Indicates if a blacklisted sanitized phone number is a mobile number. "
 #~ "Helps distinguish which number is blacklisted             when there is "
 #~ "both a mobile and phone field in a model."
@@ -1408,8 +1411,27 @@ msgstr ""
 #~ "negra                               cuando hay tanto un campo de móvil "
 #~ "como de teléfono en un modelo."
 
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a phone number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Indica si un número de teléfono saneado de la lista negra es un número de "
+#~ "teléfono. Ayuda a distinguir qué número está en la lista "
+#~ "negra                                 cuando hay tanto un campo de móvil "
+#~ "como de teléfono en un modelo."
+
+#~ msgid "Phone Blacklisted"
+#~ msgstr "Teléfono en la lista negra"
+
 #~ msgid "Phone/Mobile"
 #~ msgstr "Teléfono fijo/Móvil"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error en la entrega de SMS"
+
+#~ msgid "Sanitized Number"
+#~ msgstr "Número saneado"
 
 #~ msgid ""
 #~ "- Contact: Use this to organize the contact details of employees of a "

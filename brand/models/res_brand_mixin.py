@@ -1,7 +1,8 @@
 # Copyright 2019 ACSONE SA/NV
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+from lxml.builder import E
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 from .res_company import BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL
@@ -27,6 +28,17 @@ class ResBrandMixin(models.AbstractModel):
         compute="_compute_is_brand_required",
     )
 
+    @api.model
+    def default_get(self, fields_list):
+        defaults = super().default_get(fields_list)
+        if "company_id" in fields_list and not defaults.get("company_id"):
+            company_field = self._fields.get("company_id")
+            if company_field is not None and not (
+                company_field.related and company_field.readonly
+            ):
+                defaults["company_id"] = self.env.company.id
+        return defaults
+
     @api.depends("company_id")
     def _compute_is_brand_required(self):
         for record in self:
@@ -40,17 +52,15 @@ class ResBrandMixin(models.AbstractModel):
     def _check_brand_requirement(self):
         for rec in self:
             if rec.is_brand_required and not rec.brand_id:
-                raise ValidationError(self.env._("Brand is required"))
+                raise ValidationError(_("Brand is required"))
 
     @api.constrains("brand_id", "company_id")
     def _check_brand_company_id(self):
         for rec in self:
             if rec.brand_id.company_id and rec.brand_id.company_id != rec.company_id:
                 raise ValidationError(
-                    self.env._(
-                        "Brand company must match document company for %(doc_name)s",
-                        doc_name=rec.display_name,
-                    )
+                    _("Brand company must match document company for %s")
+                    % rec.display_name
                 )
 
     @api.onchange("brand_id")
@@ -74,6 +84,14 @@ class ResBrandMixin(models.AbstractModel):
             )
 
             if brand_node is not None:
+                brand_node.addprevious(
+                    E.field(
+                        name="brand_use_level",
+                        invisible="True",
+                        column_invisible="True",
+                    )
+                )
+
                 brand_node.set(
                     "invisible",
                     f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
