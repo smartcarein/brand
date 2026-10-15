@@ -111,7 +111,7 @@
                 <field name="id" />
                 <field name="color" />
                 <field name="display_name" />
-                <field name="title" />
+               
                 <field name="email" />
                 <field name="phone" />
                 <field name="street" />
