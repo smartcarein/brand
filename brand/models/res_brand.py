@@ -7,6 +7,7 @@ from odoo import fields, models
 class ResBrand(models.Model):
     _name = "res.brand"
     _description = "Brand"
+    _inherits = {"res.partner": "partner_id"}
 
     partner_id = fields.Many2one(
         comodel_name="res.partner",
@@ -14,6 +15,5 @@ class ResBrand(models.Model):
         required=True,
         index=True,
         auto_join=True,
-        delegate=True,
         ondelete="restrict",
     )
