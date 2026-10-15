@@ -78,7 +78,7 @@
                         </group>
                         <group>
                             <field name="phone" widget="phone" />
-                            <field name="mobile" widget="phone" />
+                      
                             <field name="email" widget="email" />
                             <field
                                 name="website"
