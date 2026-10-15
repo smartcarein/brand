@@ -119,7 +119,7 @@
                 <field name="zip" />
                 <field name="city" />
                 <field name="country_id" />
-                <field name="mobile" />
+              
                 <field name="state_id" />
                 <field name="category_id" />
                 <field name="image_128" />
